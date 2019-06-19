@@ -3,15 +3,19 @@
 import React from "react";
 import classnames from "classnames";
 
-const getDotCount = spec => {
+var getDotCount = function({
+  infinite,
+  slideCount,
+  slidesToScroll,
+  slidesToShow
+}) {
   let dots;
-
-  if (spec.infinite) {
-    dots = Math.ceil(spec.slideCount / spec.slidesToScroll);
+  if (infinite) {
+    dots = Math.ceil(slideCount / slidesToScroll);
+  } else if (slidesToScroll > 1) {
+    dots = Math.ceil((slideCount - slidesToShow) / slidesToScroll) + 1;
   } else {
-    dots =
-      Math.ceil((spec.slideCount - spec.slidesToShow) / spec.slidesToScroll) +
-      1;
+    dots = Math.ceil(slideCount);
   }
 
   return dots;
