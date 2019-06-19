@@ -1,5 +1,5 @@
 {
-  "name": "react-slick",
+  "name": "@fundament/react-slick",
   "version": "0.24.0",
   "description": " React port of slick carousel",
   "main": "./lib",
@@ -18,10 +18,13 @@
     "precommit": "lint-staged"
   },
   "author": "Kiran Abburi",
+  "contributors": [
+    "kiliw"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akiran/react-slick"
+    "url": "https://github.com/fundament-sto/react-slick"
   },
   "keywords": [
     "slick",
